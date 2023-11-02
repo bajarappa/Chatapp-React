@@ -1,0 +1,380 @@
+{
+  "loggedInUser": {
+    "id": 1,
+    "name": "Bajarappa",
+    "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  "contacts": [
+    {
+      "id": 2,
+      "name": "Alice Smith",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1632765854612-9b02b6ec2b15?auto=format&fit=crop&q=80&w=1972&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "name": "Bob Johnson",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 4,
+      "name": "Eve Williams",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 5,
+      "name": "Rajasekhar",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1550246140-5119ae4790b8?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 6,
+      "name": "Grace Johnson",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1492567291473-fe3dfc175b45?auto=format&fit=crop&q=80&w=1968&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 7,
+      "name": "Linda Davis",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1550246141-363ccad4018d?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 8,
+      "name": "George Wilson",
+      "current": false,
+      "avatar": "https://plus.unsplash.com/premium_photo-1688497831136-0b76172b0f5f?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 9,
+      "name": "Karen Lee",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 10,
+      "name": "Mark Miller",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1550246140-18d9dd4a6438?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 11,
+      "name": "Sarah Anderson",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1548581245-89155be477c0?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 12,
+      "name": "Michael Brown",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1606790627999-94f8c0983f0d?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 13,
+      "name": "Susan Jones",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1513836279017-7e9f7d84b7f7?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 14,
+      "name": "David White",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1566053617256-1cc83b9a2012?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 15,
+      "name": "Mary Green",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1569493866201-d7aef7be3ef0?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 16,
+      "name": "James Taylor",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1570382048353-8ee3f03b3d20?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 17,
+      "name": "Patricia Martinez",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1568696620708-38f2bb6a9fc2?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 18,
+      "name": "Richard Adams",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1566053617256-1cc83b9a2012?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 19,
+      "name": "Linda Moore",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1503599164788-76a964773564?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 20,
+      "name": "Robert Clark",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1526662046312-f4db06dcd182?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 21,
+      "name": "Jennifer Harris",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1599432461642-45b7f5b3f470?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 22,
+      "name": "William King",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1606782049861-452f4c1c14c0?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 23,
+      "name": "Susan Young",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1548581245-89155be477c0?auto.format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 24,
+      "name": "Daniel Hall",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1606790627999-94f8c0983f0d?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 25,
+      "name": "Nancy Turner",
+      "current": false,
+      "avatar": "https://images.unsplash.com/photo-1569493866201-d7aef7be3ef0?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1pYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    }
+  ],
+  "conversations": [
+    {
+      "id": 1,
+      "contactId": 2,
+      "messages": [
+        {
+          "id": 1,
+          "text": "Hi Alice",
+          "timestamp": "10/17/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 2,
+          "text": "Hello Bajarappa",
+          "timestamp": "10/17/2023",
+          "isMyMessage": false
+        },
+        {
+          "id": 3,
+          "text": "What do you think about the new restaurant that opened downtown?",
+          "timestamp": "10/18/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 4,
+          "text": "I heard it's great! We should check it out sometime.",
+          "timestamp": "10/18/2023",
+          "isMyMessage": false
+        },
+        {
+          "id": 5,
+          "text": "Sure, I'm up for it. How about this weekend?",
+          "timestamp": "10/19/2023",
+          "isMyMessage": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "contactId": 3,
+      "messages": [
+        {
+          "id": 3,
+          "text": "Hello Bob",
+          "timestamp": "10/17/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 4,
+          "text": "Hello Bajarappa",
+          "timestamp": "10/17/2023",
+          "isMyMessage": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "contactId": 4,
+      "messages": [
+        {
+          "id": 11,
+          "text": "Hi Eve!",
+          "timestamp": "10/17/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 12,
+          "text": "How are you doing?",
+          "timestamp": "10/17/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 13,
+          "text": "I'm doing great!",
+          "timestamp": "10/17/2023",
+          "isMyMessage": false
+        },
+        {
+          "id": 14,
+          "text": "That's awesome! By the way, have you heard about the upcoming music festival?",
+          "timestamp": "10/18/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 15,
+          "text": "Oh, tell me more about it!",
+          "timestamp": "10/18/2023",
+          "isMyMessage": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "contactId": 5,
+      "messages": [
+        {
+          "id": 16,
+          "text": "Hey Rajasekhar",
+          "timestamp": "10/18/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 17,
+          "text": "Hello Bajarappa",
+          "timestamp": "10/18/2023",
+          "isMyMessage": false
+        },
+        {
+          "id": 18,
+          "text": "I've been exploring some hiking trails lately. They're fantastic!",
+          "timestamp": "10/19/2023",
+          "isMyMessage": true
+        },
+        {
+          "id": 19,
+          "text": "That sounds amazing! I'd love to join you sometime.",
+          "timestamp": "10/19/2023",
+          "isMyMessage": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "contactId": 6,
+      "messages": []
+    },
+    {
+      "id": 6,
+      "contactId": 7,
+      "messages": []
+    },
+    {
+      "id": 7,
+      "contactId": 8,
+      "messages": []
+    },
+    {
+      "id": 8,
+      "contactId": 9,
+      "messages": []
+    },
+    {
+      "id": 9,
+      "contactId": 10,
+      "messages": []
+    },
+    {
+      "id": 10,
+      "contactId": 11,
+      "messages": []
+    },
+    {
+      "id": 11,
+      "contactId": 12,
+      "messages": []
+    },
+    {
+      "id": 12,
+      "contactId": 13,
+      "messages": []
+    },
+    {
+      "id": 13,
+      "contactId": 14,
+      "messages": []
+    },
+    {
+      "id": 14,
+      "contactId": 15,
+      "messages": []
+    },
+    {
+      "id": 15,
+      "contactId": 16,
+      "messages": []
+    },
+    {
+      "id": 16,
+      "contactId": 17,
+      "messages": []
+    },
+    {
+      "id": 17,
+      "contactId": 18,
+      "messages": []
+    },
+    {
+      "id": 18,
+      "contactId": 19,
+      "messages": []
+    },
+    {
+      "id": 19,
+      "contactId": 20,
+      "messages": []
+    },
+    {
+      "id": 20,
+      "contactId": 21,
+      "messages": []
+    },
+    {
+      "id": 21,
+      "contactId": 22,
+      "messages": []
+    },
+    {
+      "id": 22,
+      "contactId": 23,
+      "messages": []
+    },
+    {
+      "id": 23,
+      "contactId": 24,
+      "messages": []
+    },
+    {
+      "id": 24,
+      "contactId": 25,
+      "messages": []
+    },
+    {
+      "id": 25,
+      "contactId": 2,
+      "messages": []
+    }
+  ]
+}
