@@ -1,16 +1,15 @@
 import React from "react";
-import {
-  ChevronDownIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/20/solid";
-import { useDispatch, useSelector } from "react-redux";
-import { userActions, userSelector } from "../redux/reducers/userReducer";
+import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
+import { useDispatch } from "react-redux";
+import { userActions } from "../redux/reducers/userReducer";
+
 export default function SearchContacts({ searchTerm }) {
-  // const searchTerm = useSelector(userSelector);
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
     const searchValue = e.target.value.toLowerCase();
+
+    // Dispatch an action to update the search term in Redux state
     dispatch(userActions.setSearchTerm(searchValue));
   };
 

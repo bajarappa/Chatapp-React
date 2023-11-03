@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+// ContactList component is responsible for rendering the list of contacts in the sidebar.
+// It receives a list of `contacts` and a function, `handleSelectConversation`, to handle contact selection.
 export default function ContactList({ contacts, handleSelectConversation }) {
   return (
     <ul role="list" className="flex flex-1 flex-col gap-y-7 px-6">
@@ -18,7 +20,7 @@ export default function ContactList({ contacts, handleSelectConversation }) {
                     alt={contact.name}
                   />
                   <div className="flex-auto">
-                    <div className="flex items-baseline justify-between gap-x-4">
+                    <div className="flex items-baseline justify between gap-x-4">
                       <p className="text-sm font-semibold leading-6 text-gray-900">
                         {contact.name}
                       </p>

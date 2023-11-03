@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { userActions } from "../../redux/reducers/userReducer";
 
@@ -14,6 +14,7 @@ export default function Conversation({
 }) {
   const dispatch = useDispatch();
 
+  // Handle selecting a conversation/contact
   const handleSelectConversation = (contact) => {
     dispatch(userActions.setSelectedContact(contact));
   };
@@ -24,7 +25,7 @@ export default function Conversation({
         <div
           onClick={() => handleSelectConversation(contact)}
           className={
-            contact.id == selectedContactId
+            contact.id === selectedContactId
               ? "bg-gray-200 flex items-center gap-x-4 rounded-md p-2 text-sm leading-6 font-semibold"
               : "flex items-center gap-x-4 rounded-md p-2 text-sm leading-6 font-semibold hover:bg-gray-50"
           }

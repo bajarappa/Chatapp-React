@@ -1,5 +1,7 @@
 import React from "react";
 
+// ConversationHeader component displays the header for the selected conversation.
+// It receives the `selectedContact` data to show contact information.
 export default function ConversationHeader({ selectedContact }) {
   return (
     <>
@@ -11,7 +13,7 @@ export default function ConversationHeader({ selectedContact }) {
             alt={selectedContact.name}
           />
           <div className="flex-auto">
-            <div className="flex items-baseline justify-between gap-x-4">
+            <div className="flex items-baseline justify between gap-x-4">
               <p className="text-sm font-semibold leading-6 text-gray-900">
                 {selectedContact.name}
               </p>

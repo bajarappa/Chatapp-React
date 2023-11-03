@@ -2,12 +2,16 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { userActions } from "../../redux/reducers/userReducer";
 
+// UserHeader component displays user information and a sidebar toggle button.
+// It receives the `loggedInUser` data and dispatches actions to handle sidebar toggling.
 export default function UserHeader({ loggedInUser }) {
   const dispatch = useDispatch();
 
+  // Handle toggling the sidebar
   const handleToggleSidebar = () => {
     dispatch(userActions.toggleSidebar());
   };
+
   return (
     <>
       {loggedInUser && (
