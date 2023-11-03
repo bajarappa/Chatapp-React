@@ -43,7 +43,11 @@ export default function Messages({ selectedContact, conversations }) {
     <div className="chat-messages">
       {conversation ? (
         conversation.messages?.map((message) => (
-          <ChatMessages key={message.id} message={message} />
+          <ChatMessages
+            key={message.id}
+            message={message}
+            selectedContact={selectedContact.name}
+          />
         ))
       ) : (
         <div>No messages.</div>

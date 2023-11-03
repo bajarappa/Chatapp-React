@@ -1,4 +1,4 @@
-export default function ChatMessage({ message }) {
+export default function ChatMessage({ message, selectedContact }) {
   return (
     <div
       className={
@@ -14,20 +14,20 @@ export default function ChatMessage({ message }) {
             : "flex flex-row items-center"
         }
       >
-        {/* <div
-          className={
-            message.isMyMessage
-              ? "flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
-              : "flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
-          }
-        >
-          A
-        </div> */}
         <div
           className={
             message.isMyMessage
-              ? "relative mr-3 text-base bg-indigo-100 py-2 px-4 shadow rounded-xl"
-              : "relative ml-3 text-base bg-white py-2 px-4 shadow rounded-xl"
+              ? ""
+              : "flex items-center justify-center text-white h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+          }
+        >
+          {!message.isMyMessage ? selectedContact.charAt(0) : ""}
+        </div>
+        <div
+          className={
+            message.isMyMessage
+              ? "relative mr-3 text-base bg-indigo-50 py-2 px-4  rounded-xl"
+              : "relative ml-3 text-base bg-gray-50 py-2 px-4  rounded-xl"
           }
         >
           <div>{message.text}</div>
