@@ -1,10 +1,17 @@
 import { useDispatch, useSelector } from "react-redux";
 import Conversation from "./Conversation";
 import { fetchUserData, userSelector } from "../../redux/reducers/userReducer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function Conversations({ contacts, conversations }) {
-  // console.log(contacts);
+export default function Conversations({
+  contactprop,
+  conversations,
+  filteredContacts,
+  selectedContactId,
+}) {
+  const contacts = filteredContacts.length > 0 ? filteredContacts : contactprop;
+
+  // const contacts = filteredContacts || contactprop;
   return (
     <>
       <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -26,6 +33,7 @@ export default function Conversations({ contacts, conversations }) {
                     key={contact.id}
                     contact={contact}
                     conversation={conversation}
+                    selectedContactId={selectedContactId}
                   />
                 );
               })}

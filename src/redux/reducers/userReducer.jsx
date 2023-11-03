@@ -10,6 +10,8 @@ const initialState = {
   selectedContact: null,
   searchTerm: "",
   filteredContacts: [],
+  sidebarOpen: false,
+  selectedContactId: null,
 };
 
 export const fetchUserData = createAsyncThunk(
@@ -35,6 +37,7 @@ export const userSlice = createSlice({
   reducers: {
     setSelectedContact: (state, action) => {
       state.selectedContact = action.payload;
+      state.selectedContactId = action.payload.id;
     },
     setSearchTerm: (state, action) => {
       state.searchTerm = action.payload;
@@ -42,6 +45,9 @@ export const userSlice = createSlice({
         const name = `${contact.name}`.toLowerCase();
         return name.includes(state.searchTerm);
       });
+    },
+    toggleSidebar: (state) => {
+      state.sidebarOpen = !state.sidebarOpen;
     },
   },
   extraReducers: (builder) => {
@@ -73,7 +79,10 @@ export const userSlice = createSlice({
             id: conversation.messages.length + 1, // You can calculate the ID as needed
             text,
             isMyMessage: true,
-            timestamp: new Date().toISOString(),
+            timestamp: new Date().toLocaleTimeString([], {
+              hour: "2-digit",
+              minute: "2-digit",
+            }),
           };
 
           const updatedMessages = [...conversation.messages, newMessage];

@@ -1,43 +1,43 @@
 import React from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import {
-  Bars3Icon,
-  BellIcon,
-  CalendarIcon,
-  ChartPieIcon,
-  Cog6ToothIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
-  HomeIcon,
-  UsersIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
-];
+import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
+import SearchContacts from "../SearchContacts";
+import { useDispatch, useSelector } from "react-redux";
+import { userActions } from "../../redux/reducers/userReducer";
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-const teams = [
-  { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
-  { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
-  { id: 3, name: "Workcation", href: "#", initial: "W", current: false },
-];
-export default function CreateConversation() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+export default function CreateConversation({
+  conversations,
+  contactprop,
+  sidebarOpen,
+  filteredContacts,
+}) {
+  const dispatch = useDispatch();
+
+  const handleToggleSidebar = () => {
+    dispatch(userActions.toggleSidebar());
+  };
+  const handleSelectConversation = (contact) => {
+    dispatch(userActions.setSelectedContact(contact));
+    dispatch(userActions.toggleSidebar());
+    dispatch(userActions.setSearchTerm(""));
+  };
+  const contacts = filteredContacts.length > 0 ? filteredContacts : contactprop;
+
+  // const contacts = filteredContacts || contacts;
+
   return (
     <>
       <Transition.Root show={sidebarOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="relative z-50 lg:hidden"
-          onClose={setSidebarOpen}
+          className="relative z-50 "
+          onClose={handleToggleSidebar}
         >
           <Transition.Child
             as={Fragment}
@@ -75,7 +75,7 @@ export default function CreateConversation() {
                     <button
                       type="button"
                       className="-m-2.5 p-2.5"
-                      onClick={() => setSidebarOpen(false)}
+                      onClick={handleToggleSidebar}
                     >
                       <span className="sr-only">Close sidebar</span>
                       <XMarkIcon
@@ -87,86 +87,60 @@ export default function CreateConversation() {
                 </Transition.Child>
                 {/* Sidebar component, swap this element with another sidebar if you like */}
                 <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
-                  <div className="flex h-16 shrink-0 items-center">
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt="Your Company"
-                    />
+                  <div className="sticky top-0 z-40 flex justify-between h-16 shrink-0 items-center border-b border-gray-200 bg-white px-6">
+                    <div className="flex items-center gap-x-4">
+                      <div className="flex-auto">
+                        <div className="flex items-baseline justify-between gap-x-4">
+                          <p className="text-xl font-semibold leading-6 text-gray-900">
+                            Contacts
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-center px-6">
+                    <SearchContacts />
                   </div>
                   <nav className="flex flex-1 flex-col">
                     <ul role="list" className="flex flex-1 flex-col gap-y-7">
                       <li>
-                        <ul role="list" className="-mx-2 space-y-1">
-                          {navigation.map((item) => (
-                            <li key={item.name}>
-                              <a
-                                href={item.href}
-                                className={classNames(
-                                  item.current
-                                    ? "bg-gray-50 text-indigo-600"
-                                    : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                                )}
-                              >
-                                <item.icon
-                                  className={classNames(
-                                    item.current
-                                      ? "text-indigo-600"
-                                      : "text-gray-400 group-hover:text-indigo-600",
-                                    "h-6 w-6 shrink-0"
-                                  )}
-                                  aria-hidden="true"
-                                />
-                                {item.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                      <li>
-                        <div className="text-xs font-semibold leading-6 text-gray-400">
-                          Your teams
-                        </div>
-                        <ul role="list" className="-mx-2 mt-2 space-y-1">
-                          {teams.map((team) => (
-                            <li key={team.name}>
-                              <a
-                                href={team.href}
-                                className={classNames(
-                                  team.current
-                                    ? "bg-gray-50 text-indigo-600"
-                                    : "text-gray-700 hover:text-indigo-600 hover:bg-gray-50",
-                                  "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                                )}
-                              >
-                                <span
-                                  className={classNames(
-                                    team.current
-                                      ? "text-indigo-600 border-indigo-600"
-                                      : "text-gray-400 border-gray-200 group-hover:border-indigo-600 group-hover:text-indigo-600",
-                                    "flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border text-[0.625rem] font-medium bg-white"
-                                  )}
+                        <ul role="list" className=" ">
+                          {contacts.map((contact) => {
+                            const conversation = conversations.find(
+                              (conv) => conv.contactId === contact.id
+                            );
+                            return (
+                              <>
+                                <Link
+                                  key={contact.id}
+                                  to={`/conversation/${contact.id}`}
                                 >
-                                  {team.initial}
-                                </span>
-                                <span className="truncate">{team.name}</span>
-                              </a>
-                            </li>
-                          ))}
+                                  <div
+                                    onClick={() =>
+                                      handleSelectConversation(contact)
+                                    }
+                                    className={
+                                      "flex items-center gap-x-4 rounded-md p-2 text-sm leading-6 font-semibold hover:bg-gray-50"
+                                    }
+                                  >
+                                    <img
+                                      className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                                      src={contact.avatar}
+                                      alt={contact.name}
+                                    />
+                                    <div className="flex-auto">
+                                      <div className="flex items-baseline justify-between gap-x-4">
+                                        <p className="text-sm font-semibold leading-6 text-gray-900">
+                                          {contact.name}
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Link>
+                              </>
+                            );
+                          })}
                         </ul>
-                      </li>
-                      <li className="mt-auto">
-                        <a
-                          href="#"
-                          className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-indigo-600"
-                        >
-                          <Cog6ToothIcon
-                            className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-indigo-600"
-                            aria-hidden="true"
-                          />
-                          Settings
-                        </a>
                       </li>
                     </ul>
                   </nav>

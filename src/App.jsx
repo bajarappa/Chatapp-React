@@ -5,6 +5,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Conversation from "./components/leftPanel/Conversation";
+import ErrorPage from "./pages/ErrorPage";
 
 let persistor = persistStore(store);
 
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <ChatPage />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "conversation/:id",

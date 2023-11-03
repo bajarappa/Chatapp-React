@@ -5,13 +5,13 @@ import {
 } from "@heroicons/react/20/solid";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions, userSelector } from "../redux/reducers/userReducer";
-export default function SearchContacts() {
-  const searchValue = useSelector(userSelector);
+export default function SearchContacts({ searchTerm }) {
+  // const searchTerm = useSelector(userSelector);
   const dispatch = useDispatch();
 
   const handleSearch = (e) => {
-    const searchTerm = e.target.value;
-    dispatch(userActions.setSearchTerm(searchTerm));
+    const searchValue = e.target.value.toLowerCase();
+    dispatch(userActions.setSearchTerm(searchValue));
   };
 
   return (
@@ -32,7 +32,7 @@ export default function SearchContacts() {
           className="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           placeholder="Search"
           type="search"
-          value={searchValue}
+          value={searchTerm}
           onChange={handleSearch}
         />
       </div>
